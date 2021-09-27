@@ -7,6 +7,8 @@
     <title>Superhero Index</title>
 </head>
 <body>
+    {% load static %}
+    <img src="{% static 'superheroes/Superhero-Group.jpg' %}" alt="Superhero Group Photo">
     <h1>List of Heroes</h1>
     <ul>
         {% for hero in all_heroes %}
@@ -19,6 +21,7 @@
        
 
     </ul>
-    <a href ="{% url 'superheroes:create'%}">Add New Hero</a>
+
+    <h2><a href ="{% url 'superheroes:create'%}">Add New Hero</a></h2>
 </body>
 </html>

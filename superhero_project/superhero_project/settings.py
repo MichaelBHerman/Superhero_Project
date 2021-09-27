@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'superheroes'
 ]
 
+STATIC_URL = 'superheroes/static/'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
