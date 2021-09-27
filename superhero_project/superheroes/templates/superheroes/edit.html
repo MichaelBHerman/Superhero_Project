@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Hero</title>
+</head>
+<body>
+       
+   <h1>Please make your desired edits to  {{single_hero.name}}. </h1> 
+            
+    <form method="post">
+    {% csrf_token %}
+        <p>Super Hero <input type = "text" name="name" id ="name" value="{{single_hero.name}}"></p>
+            
+        <p>Alter Ego: <input type = "text"  name="alter_ego" id="alter_ego" value="{{single_hero.alter_ego}}"></p>
+               
+        <p>Primary Ability: <input type="text"  name ="primary_ability" id = "primary_ability" value="{{single_hero.primary_ability}}"></p>
+                
+        <p>Secondary Ability: <input type="text"  name="secondary_ability" id="secondary_ability" value="{{single_hero.secondary_ability}}"></p>
+               
+        <p>Catchphrase: <input type="text"  name="catchphrase" id="catchphrase" value="{{single_hero.catch_phrase}}"></p>
+              
+        <input type="submit" value="Save">
+            
+    </form>
+          
+</body>
+</html>
